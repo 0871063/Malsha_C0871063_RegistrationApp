@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		2C39053029044AFB000F1CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C39052F29044AFB000F1CF8 /* AppDelegate.swift */; };
 		2C39053229044AFB000F1CF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C39053129044AFB000F1CF8 /* SceneDelegate.swift */; };
-		2C39053429044AFB000F1CF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C39053329044AFB000F1CF8 /* ViewController.swift */; };
 		2C39053729044AFB000F1CF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C39053529044AFB000F1CF8 /* Main.storyboard */; };
 		2C39053929044AFC000F1CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C39053829044AFC000F1CF8 /* Assets.xcassets */; };
 		2C39053C29044AFC000F1CF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C39053A29044AFC000F1CF8 /* LaunchScreen.storyboard */; };
+		2C39054429044B56000F1CF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C39054329044B56000F1CF8 /* LoginViewController.swift */; };
+		2C39054629044B7E000F1CF8 /* RegisteredUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C39054529044B7E000F1CF8 /* RegisteredUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C39052C29044AFB000F1CF8 /* Malsha_C0871063_RegistrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Malsha_C0871063_RegistrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C39052F29044AFB000F1CF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C39053129044AFB000F1CF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C39053329044AFB000F1CF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2C39053629044AFB000F1CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C39053829044AFC000F1CF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C39053B29044AFC000F1CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C39053D29044AFC000F1CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C39054329044B56000F1CF8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2C39054529044B7E000F1CF8 /* RegisteredUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisteredUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,10 @@
 		2C39052E29044AFB000F1CF8 /* Malsha_C0871063_RegistrationApp */ = {
 			isa = PBXGroup;
 			children = (
+				2C39054329044B56000F1CF8 /* LoginViewController.swift */,
 				2C39052F29044AFB000F1CF8 /* AppDelegate.swift */,
 				2C39053129044AFB000F1CF8 /* SceneDelegate.swift */,
-				2C39053329044AFB000F1CF8 /* ViewController.swift */,
+				2C39054529044B7E000F1CF8 /* RegisteredUser.swift */,
 				2C39053529044AFB000F1CF8 /* Main.storyboard */,
 				2C39053829044AFC000F1CF8 /* Assets.xcassets */,
 				2C39053A29044AFC000F1CF8 /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C39053429044AFB000F1CF8 /* ViewController.swift in Sources */,
+				2C39054429044B56000F1CF8 /* LoginViewController.swift in Sources */,
+				2C39054629044B7E000F1CF8 /* RegisteredUser.swift in Sources */,
 				2C39053029044AFB000F1CF8 /* AppDelegate.swift in Sources */,
 				2C39053229044AFB000F1CF8 /* SceneDelegate.swift in Sources */,
 			);
