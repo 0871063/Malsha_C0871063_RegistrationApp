@@ -80,36 +80,43 @@ class LoginViewController: UIViewController {
 
     }
     @IBAction func loginButtonClicked() {
-        
-        let userName = loginUserNameText.text ?? ""
-          let passWord = loginPasswordText.text ?? ""
-        if let registeredUser = registeredUser.first(where: {$0.userName == userName}) {
-            let result = validateUser(user: [userName:passWord])
-            if result {
-                modifyView.isHidden = false
-                loginStackView.isHidden = true
-                registerStackView.isHidden = true
-                loginButton.isEnabled = false
-                loginUserNameText.text = ""
-                loginPasswordText.text = ""
-                
-                modifyUserNameText.text = registeredUser.userName
-                modifyPasswordText.text = registeredUser.password
-                modifyFirstNameText.text = registeredUser.firstName
-                modifyLastNameText.text = registeredUser.lastName
-                modifyEmailText.text = registeredUser.email
-                userDetailTextView.text = registeredUser.description
-            }else{
-                //show an alert
-                showAlert(title: "Login Error", actionTitle: "OK", message: "Invalid User Details", preferredStyle: .alert)
-                loginUserNameText.text = ""
-                loginPasswordText.text = ""
-                
-            }
+        if  registerUsernameText.text == ""{
+            showAlert(title: "Login Error", actionTitle: "OK", message: "Please provide your username", preferredStyle: .alert)
+                return
+        }else if registerPasswordText.text == ""{
+            showAlert(title: "Login Error", actionTitle: "OK", message: "Please provide your password", preferredStyle: .alert)
+                return
         }else{
-            showAlert(title: "Login Error", actionTitle: "OK", message: "User not registerd. Please reister", preferredStyle: .alert)
-            loginUserNameText.text = ""
-            loginPasswordText.text = ""
+            let userName = loginUserNameText.text ?? ""
+            let passWord = loginPasswordText.text ?? ""
+            if let registeredUser = registeredUser.first(where: {$0.userName == userName}) {
+                let result = validateUser(user: [userName:passWord])
+                if result {
+                    modifyView.isHidden = false
+                    loginStackView.isHidden = true
+                    registerStackView.isHidden = true
+                    loginButton.isEnabled = false
+                    loginUserNameText.text = ""
+                    loginPasswordText.text = ""
+                    
+                    modifyUserNameText.text = registeredUser.userName
+                    modifyPasswordText.text = registeredUser.password
+                    modifyFirstNameText.text = registeredUser.firstName
+                    modifyLastNameText.text = registeredUser.lastName
+                    modifyEmailText.text = registeredUser.email
+                    userDetailTextView.text = registeredUser.description
+                }else{
+                    //show an alert
+                    showAlert(title: "Login Error", actionTitle: "OK", message: "Invalid User Details", preferredStyle: .alert)
+                    loginUserNameText.text = ""
+                    loginPasswordText.text = ""
+                    
+                }
+            }else{
+                showAlert(title: "Login Error", actionTitle: "OK", message: "User not registerd. Please reister", preferredStyle: .alert)
+                loginUserNameText.text = ""
+                loginPasswordText.text = ""
+            }
         }
     }
     
