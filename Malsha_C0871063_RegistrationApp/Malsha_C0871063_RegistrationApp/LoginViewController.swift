@@ -80,10 +80,10 @@ class LoginViewController: UIViewController {
 
     }
     @IBAction func loginButtonClicked() {
-        if  registerUsernameText.text == ""{
+        if  loginUserNameText.text == ""{
             showAlert(title: "Login Error", actionTitle: "OK", message: "Please provide your username", preferredStyle: .alert)
                 return
-        }else if registerPasswordText.text == ""{
+        }else if loginPasswordText.text == ""{
             showAlert(title: "Login Error", actionTitle: "OK", message: "Please provide your password", preferredStyle: .alert)
                 return
         }else{
@@ -154,8 +154,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func saveButtonClicked() {
-        
-        if modifyPasswordText.text == ""{
+        if modifyUserNameText.text == ""{
+            showAlert(title: "Modify Error", actionTitle: "OK", message: "UserName cannot be empty", preferredStyle: .alert)
+                return
+        }else if modifyPasswordText.text == ""{
             showAlert(title: "Modify Error", actionTitle: "OK", message: "Please provide your password", preferredStyle: .alert)
                 return
         }else if modifyFirstNameText.text == ""{
